@@ -48,7 +48,7 @@
     if (res.ok) {
       localStorage.setItem("access", data.access);
       localStorage.setItem("refresh", data.refresh);
-     
+      localStorage.setItem("username", username);
     
     const profileRes = await fetch("http://127.0.0.1:8000/api/profile/", {//return Response
       headers: {
@@ -67,7 +67,7 @@
     else {
       alert("User Login Successful ✅");
       setTimeout(() => {
-        window.location.href = "{% url 'raise_complaint' %}";
+        window.location.href = "{% url 'user_dashboard' %}";
       }, 300);
       
     }

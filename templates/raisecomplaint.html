@@ -23,6 +23,7 @@
           <input type="submit" value="Submit Complaint" id="btn"  onclick="raise()" >
       </form>
  </div>
+ <button onclick="back()"style="padding:10px 30px; color:white;background-color:#3b7fe7;border:none;margin-left:47%;margin-top:20px;cursor:pointer;">Back</button>
 {% endblock %}
 
 {% block extra_js %}
@@ -64,6 +65,9 @@
       console.error(err);
       alert("Something went wrong ❌");
     }
+  }
+  function back(){
+    window.location.href="{% url 'user_dashboard'%}";
   }
 </script>
 {% endblock %}

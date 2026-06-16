@@ -31,9 +31,7 @@ button:hover{
       background:#084fc0;
      }
 .msg{
-      text-align:center; 
-      margin-top:10px; 
-      color:red; 
+      text-align:center;  
       }
 @media (max-width:790px){
     .box{

@@ -23,13 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t^hs*f2%)$*m1i7r%%(=yxupn&yxcb=$m7iag=n0=#avaus+^*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    ".onrender.com",
-]
+# ALLOWED_HOSTS = [
+#     "localhost",
+#     "127.0.0.1",
+#     ".onrender.com",
+# ]
+ALLOWED_HOSTS=[]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -113,19 +114,6 @@ DATABASES = {
     }
 }
 
-
-EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
-EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('1', 'true', 'yes', 'on')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'mangalokesh2@gmail.com')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-
-if EMAIL_HOST_PASSWORD:
-    EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

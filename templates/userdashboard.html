@@ -11,7 +11,7 @@
 <div class="main-container">
         <div class="dashboard-card">
             <h2>
-                  Welcome, <span id="username"></span>
+                  Welcome, <span id="username">{{user.username}}</span>
             </h2>
             <p>
                 Raise and track your complaints easily through the Complaint Management System.
@@ -26,7 +26,7 @@
 {% block extra_js %}
 <script>
     const username = localStorage.getItem("username");
-    document.getElementById("username").innerText = username;
+    document.getElementById("username").innerText = username.toUpperCase()[0] + username.slice(1);
 </script>
 {% endblock %}
 
