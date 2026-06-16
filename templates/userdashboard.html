@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Complaint Raise | Complaint Management System{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'userdashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="main-container">
+        <div class="dashboard-card">
+            <h2>
+                  Welcome, <span id="username"></span>
+            </h2>
+            <p>
+                Raise and track your complaints easily through the Complaint Management System.
+                Stay updated with complaint status, responses, and resolutions in one place.
+            </p>
+            <a href="{% url 'raise_complaint' %}" class="raise-btn">
+                Raise Complaint
+            </a>
+        </div>
+    </div>
+{% endblock %}
+{% block extra_js %}
+<script>
+    const username = localStorage.getItem("username");
+    document.getElementById("username").innerText = username;
+</script>
+{% endblock %}
+

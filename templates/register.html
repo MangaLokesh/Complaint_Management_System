@@ -13,6 +13,7 @@
   <form onsubmit="event.preventDefault();">
     <input type="text" id="username" placeholder="Username" required>
     <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="phone_number" placeholder="Phone number (for SMS reset)" required>
     <input type="password" id="password" placeholder="Password" required>
     <input type="password" id="password2" placeholder="Confirm Password" required>
     <p class="msg" id="msg"></p><br>
@@ -28,13 +29,14 @@
   async function registerUser(){
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
+    const phone_number = document.getElementById("phone_number").value;
     const password = document.getElementById("password").value;
     const password2 = document.getElementById("password2").value;
     const msg = document.getElementById("msg");
     const res = await fetch("http://127.0.0.1:8000/api/register/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, email, password, password2 })
+      body: JSON.stringify({ username, email, phone_number, password, password2 })
     });
   
     const data = await res.json();

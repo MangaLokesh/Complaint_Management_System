@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes, parser_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.parsers import MultiPartParser, FormParser
 from .models import Complaint
 from rest_framework import status
 from .serializers import ComplaintSerializer
@@ -29,19 +30,23 @@ def delete_user_api(request,id):
     user.delete()
     return Response({"message":"Deleted Successfully"})
 def raise_complaint(request):
-    return render(request,"raisecomplaint.html")
+    return render(request, "raisecomplaint.html")
 
+
+def user_dashboard(request):
+    return render(request, "userdashboard.html")
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
+@parser_classes([MultiPartParser, FormParser])
 def raise_complaint_api(request):
     serializer = ComplaintSerializer(data=request.data)
     if serializer.is_valid():
-        complaint=Complaint.objects.create(
+        complaint = Complaint.objects.create(
             user=request.user,
             title=serializer.validated_data["title"],
             description=serializer.validated_data["description"],
             room_no=serializer.validated_data["room_no"],
-            
+            image=serializer.validated_data.get("image"),
         )
         return Response(ComplaintSerializer(complaint).data, status=201)
     return Response(serializer.errors, status=400)

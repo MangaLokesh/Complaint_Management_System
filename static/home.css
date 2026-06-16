@@ -61,3 +61,28 @@
   font-size:14px;
   line-height:1.6;
 }
+@media (max-width:675px) {
+  .hero a{
+    width: 30%;
+  }
+  h2{
+    transition: 2s;
+    font-size:15px;
+  }
+  .card h3{
+    transition: 2s;
+    font-size: 12px;
+  }
+  .hero a{
+    transition: 2s;
+    width: 50%;
+    font-size: 12px;
+  }
+  .hero p{
+    transition: 2s;
+    font-size: 12px;
+  }
+}
+
+
+

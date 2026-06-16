@@ -10,7 +10,7 @@ from django.shortcuts import render
 
 # @user_passes_test(superuser_check)
 def dashboard(request):
-    users = User.objects.filter(is_superuser=False)#[<>,<>]
-    complaints= Complaint.objects.all()
-    return render(request,"dashboard.html",{"users":users,"complaints":complaints})
+    users = User.objects.filter(is_superuser=False)
+    complaints = Complaint.objects.all()
+    return render(request, "dashboard.html", {"users": users, "complaints": complaints})
 

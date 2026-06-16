@@ -1,7 +1,7 @@
 .com{
     max-width: 35%;
     position:relative;
-    left: 35%;
+    left: 33%;
     margin-top: 20px;
     border: 1px solid ;
     padding: 15px 30px;
@@ -38,15 +38,112 @@ textarea{
     border-radius: 4px;
     color: white;
 }
+button{
+    padding:10px 30px; 
+    color:white;
+    background-color:#3b7fe7;
+    border:none;
+    margin-left:47%;
+    margin-top:10px;
+    cursor:pointer;
+}
 #btn:hover{
     background:#1558b0;
     cursor: pointer;
 }
-  input:focus{
+input:focus{
     outline: none;
     border-color: #1a73e8;
   }
-  textarea:focus{
+textarea:focus{
     outline: none;
     border-color: #1a73e8;
+  }
+@media (max-width:790px){
+    .com{
+        max-width: 50%;
+        position:relative;
+        left: 27%;
+    }
+    .com h3{
+        transition: 3s;
+        font-size: 20px;
+    }
+    label{
+        transition: 3s;
+        font-size: 13px;
+    }
+  }
+@media (max-width:607px){
+    .com{
+        max-width: 65%;
+        padding: 10px 20px;
+        position:relative;
+        left: 18%;
+    }
+    .com h3{
+        transition: 3s;
+        font-size: 17px;
+    }
+    #btn{
+        transition: 3s;
+        font-size:12px;
+    }
+    button{
+        transition: 3s;
+        margin-left: 44%;
+    }
+    label{
+        transition: 3s;
+        font-size: 12px;
+    }
+  }
+  @media (max-width:505px){
+    input,textarea{
+        transition: 3s;
+        margin-bottom: 5px;
+    }
+    .com h3{
+        transition: 3s;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+  }
+  @media (max-width:441px){
+    .com{
+        padding: 7px 15px;
+    }
+    .com h3{
+        transition: 3s;
+        font-size: 15px;
+    }
+    #btn{
+        transition: 3s;
+        font-size:10px;
+    }
+    span{
+        transition: 2s;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    button{
+        transition: 3s;
+        font-size:11px;
+        margin-left: 42%;
+    }
+  }
+  @media (max-width:410px){
+    button{
+        transition: 3s;
+        margin-left: 40%;
+    }
+    .com h3{
+        transition: 3s;
+        font-size: 13px;
+    }
+    label{
+        transition: 3s;
+        font-size:11px ;
+    }
+
   }

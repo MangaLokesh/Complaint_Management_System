@@ -50,3 +50,61 @@ textarea{
     outline: none;
     border-color: #1a73e8;
   }
+  @media (max-width:790px){
+    .com{
+        transition: 3s;
+        max-width: 50%;
+        position:relative;
+        left: 27%;
+    }
+    .com h3{
+        transition: 3s;
+        font-size: 20px;
+    }
+    label{
+        transition: 3s;
+        font-size: 13px;
+    }
+  }
+@media (max-width:607px){
+    .com{
+        transition: 3s;
+        max-width: 65%;
+        padding: 10px 20px;
+        position:relative;
+        left: 18%;
+    }
+    input,textarea{
+        transition: 3s;
+        margin-bottom: 5px;
+    }
+    .com h3{
+        transition: 3s;
+        font-size: 17px;
+    }
+    #btn{
+        transition: 3s;
+        font-size:12px;
+    }
+    span{
+        transition: 2s;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+  }
+  @media (max-width:495px){
+    .com h3{
+        transition: 3s;
+        font-size: 14px;
+
+    }
+    #btn{
+        transition: 3s;
+        font-size:9px;
+    }
+    label{
+        transition: 3s;
+        font-size: 12px;
+    }
+  }
+  

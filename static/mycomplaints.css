@@ -1,7 +1,7 @@
 table{
-    border-collapse: collapse;
-    width:100%;
-    margin-top:20px;
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
 } 
 #mycom{
     text-align: center;
@@ -15,7 +15,8 @@ table{
     background-color: #3b7fe7;
 }
 th{
-  padding:10px;
+  padding:5px;
+  text-align:center;
 }
 .actiontd{
   padding:10px;
@@ -30,6 +31,7 @@ th{
   border-radius:4px;
 }
 .delete{
+  margin-top: 5px;
   padding:10px 25px;
   background-color:red;
   color:white;
@@ -40,6 +42,65 @@ th{
   cursor:pointer;
 }
 td{
-  padding: 10px 20px;;
+  padding:5px;
   text-align:center;
+}
+#back{
+  padding:10px 30px; 
+  color:white;
+  background-color:#3b7fe7;
+  border:none;
+  margin-left:47%;
+  margin-top:20px;
+  cursor:pointer;
+}
+@media (max-width:493px){
+  h2{
+    transition: 3s;
+    font-size:13px;
+  }
+  .delete,.update{
+    transition: 3s;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  th{
+    transition: 3s;
+    font-size: 13px;
+  }
+  td{
+    transition: 3s;
+    font-size: 13px;
+  }
+  #back{
+    transition: 3s;
+    padding: 7px 20px;
+    font-size: 13px;
+    margin-left: 42%;
+  }
+}
+@media (max-width:424px){
+  h2{
+    transition: 3s;
+    font-size:10px;
+  }
+  .delete,.update{
+    transition: 3s;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  th{
+    transition: 3s;
+    font-size: 10px;
+  }
+  td{
+    transition: 3s;
+    font-size: 10px;
+  }
+  #back{
+    transition: 3s;
+    font-size: 10px;
+    padding: 5px 15px;
+    margin-left: 42%;
+  }
 }

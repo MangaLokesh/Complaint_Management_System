@@ -5,8 +5,9 @@ class Complaint(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField()
-    room_no=models.TextField(max_length=10)
-    status = models.CharField(max_length=20,default="pending")
+    room_no = models.TextField(max_length=10)
+    image = models.ImageField(upload_to='complaint_images/', blank=True, null=True)
+    status = models.CharField(max_length=20, default='pending')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

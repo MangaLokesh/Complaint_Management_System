@@ -5,14 +5,18 @@ h2{
     padding-top:10px;
     
   }
+  #fp{
+    position: relative;
+    top: 20px;
+  }
   .card{
     width:360px;
     background:white;
     padding:30px;
     border-radius:16px;
     box-shadow:0 6px 20px rgba(0,0,0,0.12);
-    margin-left:37%;
     margin-top:40px;
+    margin-left: 34%;
   }
   p{
     text-align:center;
@@ -62,4 +66,65 @@ h2{
     text-decoration:none;
     color:#1a73e8;
     font-weight:700;
+  }
+  @media (max-width:790px){
+    .card{
+      width: 50%;
+      margin-left: 28%;
+    }
+    h2{
+      transition: 3s;
+      font-size: 25px;
+    }
+  }
+  @media (max-width:650px){
+    .card{
+      transition: 3s;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+ @media (max-width:455px){
+    .card{
+      transition: 3s;
+      width: 280px;
+      margin-left: 80px;
+    }
+    h2{
+      transition: 3s;
+      font-size: 20px;
+    }
+  }
+  @media (max-width:443px){
+    .card{
+      transition: 3s;
+      margin-left: 80px;
+    }
+    h2{
+      transition: 3s;
+      font-size: 15px;
+    }
+    label{
+      transition: 3s;
+      font-size: 12px;
+    }
+    p{
+      transition: 3s;
+      font-size: 12px;
+    }
+    .btn{
+      transition: 3s;
+      font-size: 12px;
+    }
+    .extra{
+      transition: 3s;
+      font-size: 12px;
+    }
+  }
+  @media (max-width:390px){
+    .card{
+      transition: 3s;
+      width: 250px;
+      margin-left: 65px;
+    }
   }
