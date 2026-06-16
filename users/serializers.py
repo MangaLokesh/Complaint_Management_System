@@ -1,14 +1,12 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 
-
 class RegisterSerializer(serializers.Serializer):
     username = serializers.CharField()
     email = serializers.EmailField(required=False)
     phone_number = serializers.CharField(required=False, allow_blank=True)
     password = serializers.CharField(write_only=True)
     password2 = serializers.CharField(write_only=True)
-
     def validate(self, data):
         if data["password"] != data["password2"]:
             raise serializers.ValidationError(
