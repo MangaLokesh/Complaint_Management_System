@@ -89,26 +89,6 @@ Open:http://127.0.0.1:8000/
 | GET | `/api/admin/complaints/` | Get all complaints |
 | PUT | `/api/admin/complaints/<id>/` | Update complaint status |
 
-## Screenshots
-
-### Login Page
-![Login Page](screenshots/login.png)
-
----
-
-### User Dashboard
-![User Dashboard](screenshots/user_dashboard.png)
-
----
-
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin_dashboard.png)
-
----
-
-### Complaint Creation Page
-![Complaint Form](screenshots/complaint_form.png)
-
 ---
 ## Future Improvements
 
